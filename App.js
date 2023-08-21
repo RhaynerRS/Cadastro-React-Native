@@ -17,11 +17,13 @@ export default function App() {
   });
 
   return (
-    <View style={styles.container}>
-      <Text>Registre-se</Text>
-      <InputText label='Nome:' placeholder='Digite seu nome'></InputText>
-      <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
-      <InputKey label='Senha:' placeholder='Crie uma senha' secure={true}></InputKey>
+    <View style={styles.MainContainer}>
+      <Text style={styles.Title}>Registre-se</Text>
+      <View style={styles.Container}>
+        <InputText label='Nome:' placeholder='Digite seu nome'></InputText>
+        <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
+        <InputKey label='Senha:' placeholder='Crie uma senha' secure={true}></InputKey>
+      </View>
       <DefaultButton valor='Próximo'></DefaultButton>
       <StatusBar style="auto" />
     </View>
@@ -30,12 +32,20 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    gap: '16px',
+  MainContainer: {
+    gap: '35px',
     flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
     justifyContent: 'center',
     paddingInline: '0.5rem'
   },
+  Container: {
+    gap: '16px',
+    width: '100%',
+  },
+  Title: {
+    fontFamily: 'PoppinsBold',
+    fontSize: '24px',
+  }
 });

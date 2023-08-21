@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import React, { useState } from 'react';
 
+
 export function InputKey(props){
     const [secure, setSecure] = React.useState (props.secure);
 
@@ -40,10 +41,10 @@ export function InputKey(props){
             height: '54px',
         },
         Image: {
-            marginBlock: 'auto',
-            width: '24px',
-            height: '24px',
+            marginTop: 'auto',
+            marginBottom: 'auto',
             position: 'absolute',
+            height:20,
             right: '0',
             top: '0',
             bottom: '0',
@@ -56,7 +57,7 @@ export function InputKey(props){
             <Text style={styles.Label}>{props.label}</Text>
             <View style={styles.Input}>
                 <TextInput style={styles.Text} type="text" placeholder={props.placeholder} secureTextEntry={secure}></TextInput>
-                <Icon style={styles.Image}
+                <Icon  containerStyle={styles.Image}
                     name={secure ? "visibility" : "visibility-off"}
                     size={20} color='#625C6F' 
                     onPress={() => setSecure(!secure)} />
