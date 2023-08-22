@@ -10,7 +10,7 @@ export function Checkbox({options = [], onChange}){
     function toggle(id){
         let index = selected.includes(id);
         let arrSelecteds = [...selected];
-        if(index !== -1){
+        if(index !== -1 && index !== false){
             arrSelecteds = arrSelecteds.filter((i) => i !== id);
         } else {
             arrSelecteds.push(id);
@@ -30,9 +30,9 @@ export function Checkbox({options = [], onChange}){
         Touchable: {
             alignItems: 'center',
             justifyContent: 'center',
+            left: 0,
             height: 32,
             width: 32,
-            backgroundColor: '#625C6F',
         }
     });
 

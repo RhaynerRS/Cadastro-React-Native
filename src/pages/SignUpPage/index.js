@@ -18,6 +18,10 @@ export default function SignUpPage() {
     MerriweatherRegular: require('../../../assets/fonts/MerriweatherSans-Regular.ttf'),
   });
 
+  var options=[
+    {text:'', id:1},
+  ]
+
   return (
     <View style={styles.MainContainer}>
       <View style={styles.Hero}>
@@ -32,7 +36,7 @@ export default function SignUpPage() {
         <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
         <InputKey label='Senha:' placeholder='Crie uma senha' secure={true}></InputKey>
         <View style={styles.Sign}>
-          <Checkbox style={styles.Checkbox} onChange={(op)=> alert('op')}></Checkbox>
+          <Checkbox style={styles.Checkbox} onChange={(op)=> alert('op')} options={options}></Checkbox>
           <Text style={styles.Text}>Eu aceito 
           <Text style={styles.Hiperlink}> Termos e Condições </Text> 
           e li e entendi a 
