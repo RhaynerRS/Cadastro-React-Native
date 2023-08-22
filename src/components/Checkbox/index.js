@@ -1,29 +1,55 @@
 import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { useState } from "react";
 
 // https://www.youtube.com/watch?v=ZEATUQRxBwc
 
-export function Checkbox(props){
+export function Checkbox({options = [], onChange}){
+    const [selected, setSelected] = useState([]);
+
+    function toggle(id){
+        let index = selected.includes(id);
+        let arrSelecteds = [...selected];
+        if(index !== -1){
+            arrSelecteds = arrSelecteds.filter((i) => i !== id);
+        } else {
+            arrSelecteds.push(id);
+        }
+        setSelected(arrSelecteds);
+    }
+
     const styles = StyleSheet.create({
-        Check: {
+        Container: {
+            width: 32,
+            height: 32,
             marginTop: 'auto',
             marginBottom: 'auto',
-            height:20,
-            paddingRight: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
         },
         Touchable: {
             alignItems: 'center',
-            height: '32px',
-            width: '32px',
+            justifyContent: 'center',
+            height: 32,
+            width: 32,
+            backgroundColor: '#625C6F',
         }
     });
 
     return (
-    <View>
-        <TouchableOpacity style={styles.Touchable}>
-            <Icon name="check-box" style={styles.Check} color={('#343779')} size='20px'>
-
-            </Icon>
-        </TouchableOpacity>
+    <View style={styles.Container}>
+        {options.map((op,index) => (
+            <TouchableOpacity 
+                style={styles.Touchable} 
+                onPress={() => toggle(op?.id)}>
+                <Icon
+                    name={selected.includes(op.id) ? "check-box" : "check-box-outline-blank"} 
+                    color={selected.includes(op.id) ? '#343779' : '#625C6F'} 
+                    size={20}
+                />
+            </TouchableOpacity>
+        ))}
     </View>
     )}
+
+export default Checkbox;

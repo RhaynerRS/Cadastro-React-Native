@@ -1,7 +1,8 @@
-import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import React, { useState } from 'react';
+import { Touchable } from 'react-native';
 
 
 export function InputKey(props){
@@ -41,10 +42,13 @@ export function InputKey(props){
             height: '54px',
         },
         Image: {
+            alignItems: 'center',
+            justifyContent: 'center',
             marginTop: 'auto',
             marginBottom: 'auto',
             position: 'absolute',
-            height:20,
+            height: 32,
+            width: 32,
             right: '0',
             top: '0',
             bottom: '0',
@@ -57,10 +61,12 @@ export function InputKey(props){
             <Text style={styles.Label}>{props.label}</Text>
             <View style={styles.Input}>
                 <TextInput style={styles.Text} type="text" placeholder={props.placeholder} secureTextEntry={secure}></TextInput>
-                <Icon  containerStyle={styles.Image}
-                    name={secure ? "visibility" : "visibility-off"}
-                    size={20} color='#625C6F' 
-                    onPress={() => setSecure(!secure)} />
+                <TouchableOpacity style={styles.Image}>
+                    <Icon 
+                        name={secure ? "visibility" : "visibility-off"}
+                        size={20} color='#625C6F' 
+                        onPress={() => setSecure(!secure)} />
+                </TouchableOpacity>
             </View>
         </View>
     )
