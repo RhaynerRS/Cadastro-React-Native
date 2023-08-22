@@ -8,6 +8,7 @@ import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
 import { Checkbox } from '../../components/Checkbox';
+import { NavBar } from '../../components/NavBar/index';
 import styles from './styles'
 
 export default function SignUpPage() {
@@ -24,6 +25,7 @@ export default function SignUpPage() {
 
   return (
     <View style={styles.MainContainer}>
+      <NavBar></NavBar>
       <View style={styles.Hero}>
         <Text style={styles.Title}>Registre-se</Text>
         <View style={styles.Link}>
