@@ -25,7 +25,7 @@ export default function SignUpPage() {
 
   return (
     <View style={styles.MainContainer}>
-      <NavBar></NavBar>
+      <NavBar style={styles.Nav}></NavBar>
       <View style={styles.Hero}>
         <Text style={styles.Title}>Registre-se</Text>
         <View style={styles.Link}>

@@ -15,9 +15,9 @@ export function IconButton(props){
             border: 'none',
             paddingBlock: props.paddingBlock??"12px",
             paddingInline: props.paddingInline??"32px",
-            width: '100%',
             fontSize: '14px',
             fontFamily: 'PoppinsMedium',
+            height: 36,
         }
     });
     

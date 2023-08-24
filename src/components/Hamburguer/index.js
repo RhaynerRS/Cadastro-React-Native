@@ -1,20 +1,32 @@
 import React from "react";
-
-import {
-  Button,
-  Actionsheet,
-  useDisclose,
-  Text,
-  Box,
-  Center,
-  NativeBaseProvider,
-} from "native-base";
+import { Icon } from 'react-native-elements';
+import { StyleSheet, TouchableOpacity, View, Image } from 'react-native';
+import { Actionsheet, useDisclose, Text, Box, NativeBaseProvider } from "native-base";
 
 function Example() {
   const { isOpen, onOpen, onClose } = useDisclose();
+
+  const styles = StyleSheet.create({
+    Button: {
+      width: 36,
+    },
+    Icon:{
+      width: 36,
+      height: 36,
+      margin: 'auto',
+      color: '#26262a',
+    }
+  });
+
   return (
-    <Center>
-      <Button onPress={onOpen}>Actionsheet</Button>
+    <>
+      <TouchableOpacity onPress={onOpen} style={styles.Button}>
+        <Image
+            source={require('../../../assets/hambergermenu.png')} 
+            style={styles.Icon} 
+            size={36}
+        />
+      </TouchableOpacity>
       <Actionsheet isOpen={isOpen} onClose={onClose}>
         <Actionsheet.Content>
           <Box w="100%" h={60} px={4} justifyContent="center">
@@ -25,26 +37,30 @@ function Example() {
                 color: "gray.300",
               }}
             >
-              Albums
+              Menu
             </Text>
           </Box>
-          <Actionsheet.Item>Delete</Actionsheet.Item>
-          <Actionsheet.Item isDisabled>Share</Actionsheet.Item>
-          <Actionsheet.Item>Play</Actionsheet.Item>
-          <Actionsheet.Item>Favourite</Actionsheet.Item>
-          <Actionsheet.Item>Cancel</Actionsheet.Item>
+          <Actionsheet.Item>Sobre mim</Actionsheet.Item>
+          <Actionsheet.Item>Portfolio</Actionsheet.Item>
+          <Actionsheet.Item>Contato</Actionsheet.Item>
         </Actionsheet.Content>
       </Actionsheet>
-    </Center>
+    </>
   );
 }
 
 export default function Hamburguer() {
+  const styles = StyleSheet.create({
+    Containter: {
+      width: 36,
+    }
+  });
+
   return (
     <NativeBaseProvider>
-      <Center flex={1} px="3">
+      <View style={styles.Container}>
         <Example />
-      </Center>
+      </View>
     </NativeBaseProvider>
   );
 }

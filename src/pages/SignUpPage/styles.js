@@ -9,17 +9,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingInline: '0.5rem'
+  },
+  Nav: {
+    marginTop: 0,
   },
   Container: {
     gap: '16px',
     width: '100%',
+    paddingInline: '0.5rem',
   },
   Hero: {
     gap: '12px',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 98,
+    marginBottom: 7,
   },
   Title: {
     fontFamily: 'PoppinsBold',
