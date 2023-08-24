@@ -1,5 +1,5 @@
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
-import SignUpPage from './pages/SignUpPage/index.js';
+import VerificationCode from './pages/VerificationCode/index.js';
 
-registerRootComponent(SignUpPage);
+registerRootComponent(VerificationCode);

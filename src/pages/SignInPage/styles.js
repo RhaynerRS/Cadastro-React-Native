@@ -15,18 +15,18 @@ const styles = StyleSheet.create({
   },
   MainContainer:{
     width: '100%',
-    gap: 38,
+    gap: 112,
   },
   Container: {
     gap: '16px',
     width: '100%',
     paddingInline: '0.5rem',
-    marginBottom: 29,
   },
   Hero: {
     gap: '12px',
     alignItems: 'center',
-    justifyContent: 'center', 
+    justifyContent: 'center',
+    marginBottom: 8,
   },
   Title: {
     fontFamily: 'PoppinsBold',
@@ -50,19 +50,10 @@ const styles = StyleSheet.create({
     color: '#F86041',
     textDecorationLine: 'underline',
   },
-  Checkbox: {
-    width: 32,
-    height: 32,
-  },
-  Sign: {
-    width: '100%',
-    margin: 'auto', 
-    alignItems: 'center',
-    justifyContent: 'left',
-    fontSize: '14px',
-    display: 'flex',
+  Forgot: {
     flexDirection: 'row',
-  },
+    justifyContent: 'end',
+  }
 });
 
 export default styles;

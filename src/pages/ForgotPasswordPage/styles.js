@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   FullProject: {
-    gap: 98,
+    gap: 48,
     flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
@@ -13,15 +13,19 @@ const styles = StyleSheet.create({
   Nav: {
     marginTop: 0,
   },
+  TopContainer: {
+    gap: 14,
+    width: '100%',
+  },
   MainContainer:{
     width: '100%',
-    gap: 38,
+    gap: 122,
   },
   Container: {
     gap: '16px',
     width: '100%',
     paddingInline: '0.5rem',
-    marginBottom: 29,
+    marginBottom: 109,
   },
   Hero: {
     gap: '12px',

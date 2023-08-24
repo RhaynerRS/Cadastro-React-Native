@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   FullProject: {
-    gap: 98,
+    gap: 48,
     flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
@@ -13,18 +13,23 @@ const styles = StyleSheet.create({
   Nav: {
     marginTop: 0,
   },
+  TopContainer: {
+    gap: 14,
+    width: '100%',
+  },
   MainContainer:{
     width: '100%',
-    gap: 38,
+    gap: 32,
   },
   Container: {
     gap: '16px',
     width: '100%',
     paddingInline: '0.5rem',
-    marginBottom: 29,
+    marginBottom: 25,
   },
   Hero: {
-    gap: '12px',
+    gap: '42px',
+    paddingInline: '0.5rem',
     alignItems: 'center',
     justifyContent: 'center', 
   },
@@ -34,12 +39,13 @@ const styles = StyleSheet.create({
     color: '#26262B',
   },
   Link: {
+    gap: 8,
+    width: '100%',
+    alignItems: 'start',
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '8px',
-    fontSize: '14px',
+    fontSize: '16px',
   },
   Text: {
     fontFamily: 'MerriweatherLight',
@@ -49,19 +55,7 @@ const styles = StyleSheet.create({
     fontFamily: 'MerriweatherRegular',
     color: '#F86041',
     textDecorationLine: 'underline',
-  },
-  Checkbox: {
-    width: 32,
-    height: 32,
-  },
-  Sign: {
-    width: '100%',
-    margin: 'auto', 
-    alignItems: 'center',
-    justifyContent: 'left',
-    fontSize: '14px',
-    display: 'flex',
-    flexDirection: 'row',
+    fontSize: '24px',
   },
 });
 

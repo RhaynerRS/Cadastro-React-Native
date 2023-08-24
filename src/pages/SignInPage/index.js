@@ -11,7 +11,7 @@ import { Checkbox } from '../../components/Checkbox';
 import { NavBar } from '../../components/NavBar/index';
 import styles from './styles'
 
-export default function SignUpPage() {
+export default function SignInPage() {
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
     PoppinsBold: require('../../../assets/fonts/Poppins-Bold.ttf'),
@@ -28,23 +28,17 @@ export default function SignUpPage() {
       <NavBar style={styles.Nav}></NavBar>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>
-          <Text style={styles.Title}>Registre-se</Text>
+          <Text style={styles.Title}>Entre</Text>
           <View style={styles.Link}>
-            <Text style={styles.Text}>Já possui uma conta? </Text>
-            <Text style={styles.Hiperlink}>Entre aqui</Text>
+            <Text style={styles.Text}>Novo por aqui? </Text>
+            <Text style={styles.Hiperlink}>Registre-se aqui</Text>
           </View>
         </View>
         <View style={styles.Container}>
-          <InputText label='Nome:' placeholder='Digite seu nome'></InputText>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
-          <InputKey label='Senha:' placeholder='Crie uma senha' secure={true}></InputKey>
-          <View style={styles.Sign}>
-            <Checkbox style={styles.Checkbox} onChange={(op)=> alert('op')} options={options}></Checkbox>
-            <Text style={styles.Text}>Eu aceito 
-            <Text style={styles.Hiperlink}> Termos e Condições </Text> 
-            e li e entendi a 
-            <Text style={styles.Hiperlink}> Política de Privacidade</Text> 
-            </Text>
+          <InputKey label='Senha:' placeholder='Digite sua senha' secure={true}></InputKey>
+          <View style={styles.Forgot}>
+            <Text style={styles.Hiperlink}>Esqueci minha senha</Text> 
           </View>
         </View>
         <DefaultButton valor='Próximo'></DefaultButton>
