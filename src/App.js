@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Stack } from 'native-base';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ForgotPasswordPage from './pages/ForgotPasswordPage./index.js';
+import ForgotPasswordPage from './pages/ForgotPasswordPage/index.js';
 import SignUpPage from './pages/SignUpPage/index.js';
 import VerificationCode from './pages/VerificationCode/index.js';
 import SignInPage from './pages/SignInPage/index.js';
@@ -21,10 +21,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="SignIn" component={SignInPage}/>
-        <Stack.Screen name="SignUp" component={SignUpPage}/>
-        <Stack.Screen name="ForgotPassword" component={ForgotPasswordPage}/>
-        <Stack.Screen name="VerificationCode" component={VerificationCode}/>
+        <Stack.Screen name='SignIn' component={SignInPage}/>
+        <Stack.Screen name='SignUp' component={SignUpPage}/>
+        <Stack.Screen name='ForgotPassword' component={ForgotPasswordPage}/>
+        <Stack.Screen name='VerificationCode' component={VerificationCode}/>
       </Stack.Navigator>
     </NavigationContainer>
 
