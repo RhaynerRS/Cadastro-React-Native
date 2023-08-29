@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { Stack } from 'native-base';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -10,9 +12,14 @@ export default function App() {
   });
 
   return (
-    <View style={styles.MainContainer}>
-      <Text style={styles.Title}>This is an app!</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="SignIn" component={SignInPage}/>
+        <Stack.Screen name="SignUp" component={SignUpPage}/>
+        <Stack.Screen name="ForgotPassword" component={ForgotPasswordPage}/>
+        <Stack.Screen name="VerificationCode" component={VerificationCode}/>
+      </Stack.Navigator>
+    </NavigationContainer>
 
   );
 }

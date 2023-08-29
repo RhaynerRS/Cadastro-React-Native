@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
+import { Link } from '@react-navigation/native';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
@@ -27,14 +28,14 @@ export default function SignUpPage() {
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
         <NavBar style={styles.Nav}></NavBar>
-        <BackArrow valor={' '}></BackArrow>
+        <Link to={{ screen: 'ForgotPassword' }}><BackArrow valor={' '}></BackArrow></Link>
       </View>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>
         <Text style={styles.Title}>Recupere sua senha</Text>
         <View style={styles.Link}>
           <Text style={styles.Text}>Um código de verificação foi enviado para:</Text>
-          <Text style={styles.Hiperlink}>seumail@exemplo</Text>
+          <Text style={styles.Hiperlink}>seumail@exemplo.com</Text>
         </View>
         </View>
         <View style={styles.Container}>

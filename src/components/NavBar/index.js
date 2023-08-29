@@ -42,7 +42,7 @@ export function NavBar(props){
           />
         </TouchableOpacity>
       </View>
-      <IconButton valor={'Login'} paddingBlock={8} paddingInline={18}></IconButton>
+      <Link to={{ screen: 'SignIn' }}><IconButton valor={'Login'} paddingBlock={8} paddingInline={18}></IconButton></Link>
     </View>
   )
 }
