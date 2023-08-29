@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import { IconButton } from '../IconButton/index';
+import { Link } from '@react-navigation/native';
 import Hamburguer from '../Hamburguer/index';
 
 export function NavBar(props){
