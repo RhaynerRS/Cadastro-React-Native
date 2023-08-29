@@ -12,7 +12,7 @@ import { NavBar } from '../../components/NavBar/index';
 import { BackArrow } from '../../components/BackArrow/index';
 import styles from './styles'
 
-export default function SignUpPage() {
+export default function VerificationCode() {
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
     PoppinsBold: require('../../../assets/fonts/Poppins-Bold.ttf'),
@@ -28,7 +28,7 @@ export default function SignUpPage() {
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
         <NavBar style={styles.Nav}></NavBar>
-        <Link to={{ screen: 'ForgotPassword' }}><BackArrow valor={' '}></BackArrow></Link>
+        <Link to={{ screen: 'ForgotPasswordPage' }}><BackArrow valor={' '}/></Link>
       </View>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>

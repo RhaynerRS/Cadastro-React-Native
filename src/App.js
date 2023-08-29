@@ -5,6 +5,13 @@ import { Icon } from 'react-native-elements';
 import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Stack } from 'native-base';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ForgotPasswordPage from './src/pages/ForgotPasswordPage';
+import SignUpPage from './pages/SignUpPage';
+import VerificationCode from './pages/VerificationCode';
+import SignInPage from './pages/SignInPage';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [loaded] = useFonts({
@@ -39,3 +46,5 @@ const styles = StyleSheet.create({
     color: '#26262B',
   },
 });
+
+
