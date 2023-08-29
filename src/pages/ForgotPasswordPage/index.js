@@ -11,7 +11,7 @@ import { NavBar } from '../../components/NavBar/index';
 import { BackArrow } from '../../components/BackArrow/index';
 import styles from './styles'
 
-export default function SignUpPage() {
+export default function ForgotPasswordPage() {
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
     PoppinsBold: require('../../../assets/fonts/Poppins-Bold.ttf'),

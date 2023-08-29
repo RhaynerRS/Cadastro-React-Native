@@ -6,21 +6,21 @@ import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Stack } from 'native-base';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ForgotPasswordPage from './src/pages/ForgotPasswordPage';
-import SignUpPage from './pages/SignUpPage';
-import VerificationCode from './pages/VerificationCode';
-import SignInPage from './pages/SignInPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage./index.js';
+import SignUpPage from './pages/SignUpPage/index.js';
+import VerificationCode from './pages/VerificationCode/index.js';
+import SignInPage from './pages/SignInPage/index.js';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [loaded] = useFonts({
     PoppinsBold: require('./assets/fonts/Poppins-Bold.ttf'),
-  });
+  });s
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="SignIn" component={SignInPage}/>
         <Stack.Screen name="SignUp" component={SignUpPage}/>
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordPage}/>

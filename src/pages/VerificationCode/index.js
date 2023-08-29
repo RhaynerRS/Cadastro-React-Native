@@ -7,7 +7,6 @@ import { Link } from '@react-navigation/native';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
-import { Checkbox } from '../../components/Checkbox';
 import { NavBar } from '../../components/NavBar/index';
 import { BackArrow } from '../../components/BackArrow/index';
 import styles from './styles'
@@ -28,7 +27,7 @@ export default function VerificationCode() {
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
         <NavBar style={styles.Nav}></NavBar>
-        <Link to={{ screen: 'ForgotPasswordPage' }}><BackArrow valor={' '}/></Link>
+        <Link to={{ screen: 'ForgotPassword' }}><BackArrow valor={' '}/></Link>
       </View>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>
