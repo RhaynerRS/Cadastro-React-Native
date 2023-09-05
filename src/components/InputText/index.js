@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { useFonts } from 'expo-font';
 
@@ -29,7 +30,7 @@ export function InputText(props){
     return (
         <View style={styles.InputText}>
             <Text style={styles.Label}>{props.label}</Text>
-            <input style={styles.Input} type="text" placeholder={props.placeholder}></input>
+            <TextInput style={styles.Input} placeholder={props.placeholder} onChangeText={props.onChangeText} value={props.value}></TextInput>
         </View>
     )
 }

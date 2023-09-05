@@ -19,17 +19,16 @@ const styles = StyleSheet.create({
   },
   MainContainer:{
     width: '100%',
+    paddingInline: '0.5rem',
     gap: 32,
   },
   Container: {
     gap: '16px',
     width: '100%',
-    paddingInline: '0.5rem',
     marginBottom: 25,
   },
   Hero: {
     gap: '42px',
-    paddingInline: '0.5rem',
     alignItems: 'center',
     justifyContent: 'center', 
   },

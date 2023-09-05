@@ -23,6 +23,10 @@ export default function ForgotPasswordPage() {
     {text:'', id:1},
   ]
 
+  function handlePress(){
+    alert('Seu código de verificação é 1234')
+  }
+
   return (
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
@@ -40,7 +44,7 @@ export default function ForgotPasswordPage() {
         <View style={styles.Container}>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
         </View>
-        <DefaultButton valor='Próximo'></DefaultButton>
+        <DefaultButton valor='Próximo' onPress={handlePress}></DefaultButton>
         <StatusBar style="auto" />
       </View>
     </View>
