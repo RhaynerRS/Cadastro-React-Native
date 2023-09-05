@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
-import { Abobora } from '../../components/Abobora';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
