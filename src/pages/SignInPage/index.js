@@ -14,7 +14,7 @@ import styles from './styles'
 
 export default function SignInPage() {
 
-  const [email, setEmail, senha] = React.useState("");
+  const [email, setEmail, password, setPassword] = React.useState("");
 
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
@@ -28,6 +28,7 @@ export default function SignInPage() {
   ]
 
   function handlePress(){
+    // Pegar as informações de email e senha e dar um console.log
     console.log({
       email, password
     })
@@ -46,7 +47,7 @@ export default function SignInPage() {
         </View>
         <View style={styles.Container}>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com' onChangeText={setEmail} value={email}></InputText>
-          <InputKey label='Senha:' placeholder='Digite sua senha' secure={true}></InputKey>
+          <InputKey label='Senha:' placeholder='Digite sua senha' secure={true} onChangeText={setPassword} value={password}></InputKey>
           <View style={styles.Forgot}>
             <Text style={styles.Hiperlink}><Link to={{ screen: 'ForgotPassword' }}>Esqueci minha senha</Link></Text> 
           </View>

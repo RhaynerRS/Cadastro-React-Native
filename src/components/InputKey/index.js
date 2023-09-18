@@ -60,7 +60,7 @@ export function InputKey(props){
         <View style={styles.InputText}>
             <Text style={styles.Label}>{props.label}</Text>
             <View style={styles.Input}>
-                <TextInput style={styles.Text} type="text" placeholder={props.placeholder} secureTextEntry={secure}></TextInput>
+                <TextInput style={styles.Text} type="text" placeholder={props.placeholder} secureTextEntry={secure} onChangeText={props.onChangeText} value={props.value}></TextInput>
                 <TouchableOpacity style={styles.Image}>
                     <Icon 
                         name={secure ? "visibility" : "visibility-off"}
