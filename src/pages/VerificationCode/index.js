@@ -27,7 +27,9 @@ export default function VerificationCode() {
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
         <NavBar style={styles.Nav}></NavBar>
-        <Link to={{ screen: 'ForgotPassword' }}><BackArrow valor={' '}/></Link>
+        <Link to={{ screen: 'ForgotPassword' }}>
+          <BackArrow valor={' '}/>
+        </Link>
       </View>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>

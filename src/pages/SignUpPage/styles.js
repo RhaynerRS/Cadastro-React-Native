@@ -16,11 +16,11 @@ const styles = StyleSheet.create({
   MainContainer:{
     width: '100%',
     gap: 38,
+    paddingInline: '0.5rem',
   },
   Container: {
     gap: '16px',
     width: '100%',
-    paddingInline: '0.5rem',
     marginBottom: 29,
   },
   Hero: {

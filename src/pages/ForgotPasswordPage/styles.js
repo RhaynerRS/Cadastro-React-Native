@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
   MainContainer:{
     width: '100%',
     gap: 122,
+    paddingInline: '0.5rem',
   },
   Container: {
     gap: '16px',
     width: '100%',
-    paddingInline: '0.5rem',
     marginBottom: 109,
   },
   Hero: {

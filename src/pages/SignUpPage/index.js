@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
+import { Link } from '@react-navigation/native';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
@@ -30,7 +31,7 @@ export default function SignUpPage() {
           <Text style={styles.Title}>Registre-se</Text>
           <View style={styles.Link}>
             <Text style={styles.Text}>Já possui uma conta? </Text>
-            <Text style={styles.Hiperlink}>Entre aqui</Text>
+            <Text style={styles.Hiperlink}><Link to={{ screen: 'SignIn' }}>Entre aqui</Link></Text>
           </View>
         </View>
         <View style={styles.Container}>

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
+import { Link } from '@react-navigation/native';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
@@ -31,20 +32,24 @@ export default function ForgotPasswordPage() {
     <View style={styles.FullProject}>
       <View style={styles.TopContainer}>
         <NavBar style={styles.Nav}></NavBar>
-        <BackArrow></BackArrow>
+        <Link to={{ screen: 'SignIn' }}>
+          <BackArrow/>
+        </Link>
       </View>
       <View style={styles.MainContainer}>
         <View style={styles.Hero}>
           <Text style={styles.Title}>Recupere sua senha</Text>
           <View style={styles.Link}>
             <Text style={styles.Text}>Já possui uma conta? </Text>
-            <Text style={styles.Hiperlink}>Entre aqui</Text>
+            <Text style={styles.Hiperlink}><Link to={{ screen: 'SignIn' }}>Entre aqui</Link></Text>
           </View>
         </View>
         <View style={styles.Container}>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
         </View>
-        <DefaultButton valor='Próximo' onPress={handlePress}></DefaultButton>
+        <Link to={{ screen: 'VerificationCode' }}>
+          <DefaultButton valor='Próximo' onPress={handlePress}/>
+        </Link>
         <StatusBar style="auto" />
       </View>
     </View>

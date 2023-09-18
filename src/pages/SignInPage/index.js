@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Icon } from 'react-native-elements';
 import { useState } from 'react';
+import { Link } from '@react-navigation/native';
 import { DefaultButton } from '../../components/DefaultButton';
 import { InputText } from '../../components/InputText';
 import { InputKey } from '../../components/InputKey';
@@ -40,14 +41,14 @@ export default function SignInPage() {
           <Text style={styles.Title}>Entre</Text>
           <View style={styles.Link}>
             <Text style={styles.Text}>Novo por aqui? </Text>
-            <Text style={styles.Hiperlink}>Registre-se aqui</Text>
+              <Text style={styles.Hiperlink}><Link to={{ screen: 'SignUp' }}>Registre-se aqui</Link></Text>
           </View>
         </View>
         <View style={styles.Container}>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com' onChangeText={setEmail} value={email}></InputText>
           <InputKey label='Senha:' placeholder='Digite sua senha' secure={true}></InputKey>
           <View style={styles.Forgot}>
-            <Text style={styles.Hiperlink}>Esqueci minha senha</Text> 
+            <Text style={styles.Hiperlink}><Link to={{ screen: 'ForgotPassword' }}>Esqueci minha senha</Link></Text> 
           </View>
         </View>
         <DefaultButton valor='Próximo'></DefaultButton>
