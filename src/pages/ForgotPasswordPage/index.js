@@ -12,7 +12,7 @@ import { NavBar } from '../../components/NavBar/index';
 import { BackArrow } from '../../components/BackArrow/index';
 import styles from './styles'
 
-export default function ForgotPasswordPage() {
+export default function ForgotPasswordPage({ navigation }) {
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
     PoppinsBold: require('../../../assets/fonts/Poppins-Bold.ttf'),
@@ -26,6 +26,7 @@ export default function ForgotPasswordPage() {
 
   function handlePress(){
     alert('Seu código de verificação é 1234')
+    navigation.push("VerificationCode");
   }
 
   return (
@@ -47,9 +48,7 @@ export default function ForgotPasswordPage() {
         <View style={styles.Container}>
           <InputText label='Endereço de E-mail:' placeholder='seuemail@exemplo.com'></InputText>
         </View>
-        <Link to={{ screen: 'VerificationCode' }}>
           <DefaultButton valor='Próximo' onPress={handlePress}/>
-        </Link>
         <StatusBar style="auto" />
       </View>
     </View>

@@ -19,7 +19,7 @@ export function DefaultButton(props){
     });
     
     return (
-        <TouchableOpacity style={styles.DefaultButton}>{props.valor}</TouchableOpacity>
+        <TouchableOpacity style={styles.DefaultButton} onPress={props.onPress}>{props.valor}</TouchableOpacity>
     )
 }
 

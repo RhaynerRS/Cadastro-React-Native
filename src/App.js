@@ -9,6 +9,8 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage/index.js';
 import SignUpPage from './pages/SignUpPage/index.js';
 import VerificationCode from './pages/VerificationCode/index.js';
 import SignInPage from './pages/SignInPage/index.js';
+import AuthContext from "./src/routes";
+import Routes from "./src/routes"
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name='SignIn' component={SignInPage}/>
         <Stack.Screen name='SignUp' component={SignUpPage}/>
