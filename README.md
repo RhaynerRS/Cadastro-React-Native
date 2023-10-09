@@ -18,10 +18,14 @@ A mobile developing project, where the goal is to build fully fully-functional s
 ## How to use it:
 
 First of all, run the command line and type:
-`npm i`
+ˋˋˋ
+npm i
+ˋˋˋ
 
 Then, you can start the app by using the command:
-`npm run web`
+ˋˋˋ
+npm run web
+ˋˋˋ
 
 ## Task List:
 * Design:
