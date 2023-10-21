@@ -10,6 +10,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
   },
+  OrangeBack:{
+    height: '25.2%',
+    width: '100%',
+    borderBottomEndRadius: 32,
+    borderBottomStartRadius: 32,
+    backgroundColor: "#F86041"
+  },
   Nav: {
     marginTop: 0,
   },
