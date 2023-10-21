@@ -1,6 +1,7 @@
 import AuthRoutes from "./AuthRoutes";
+import AppRoutes from "./AppRoutes";
 
-const logado = true;
+const logado = false;
 
 export default function Routes() {
     if (logado) {
