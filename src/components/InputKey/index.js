@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { Touchable } from 'react-native';
 
 
+
 export function InputKey(props){
     const [secure, setSecure] = React.useState (props.secure);
 
