@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   MainContainer:{
     width: '100%',
-    paddingInline: '0.5rem',
+    paddingInline: '1rem',
     gap: 32,
   },
   Container: {

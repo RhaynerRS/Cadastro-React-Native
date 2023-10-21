@@ -11,24 +11,27 @@ export function IconButton(props){
             justifyContent: 'center',
             backgroundColor: '#F86041',
             borderRadius: '30px',
-            color: '#F7F7F7',
             border: 'none',
             paddingBlock: props.paddingBlock??"12px",
             paddingInline: props.paddingInline??"32px",
+            height: 36,
+        },
+        TextButton: {
+            color: '#F7F7F7',
             fontSize: '14px',
             fontFamily: 'PoppinsMedium',
-            height: 36,
-        }
+        },
     });
     
     return (
-        <TouchableOpacity style={styles.DefaultButton}>
+        <TouchableOpacity style={styles.DefaultButton} onPress={props.onPress}>
             <Icon 
                 name={'person' }
                 color={'#F7F7F7'}
                 size={17}
             />
-            {props.valor}</TouchableOpacity>
+            <Text style={styles.TextButton}>{props.valor}</Text>
+            </TouchableOpacity>
     )
 }
 

@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 export function BackArrow(props){
     const styles = StyleSheet.create({
       ContainerArrow: {
-        paddingInline: '0.5rem',
+        paddingInline: '1rem',
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'start',

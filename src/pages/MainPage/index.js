@@ -12,7 +12,7 @@ import { Checkbox } from '../../components/Checkbox';
 import { NavBar } from '../../components/NavBar/index';
 import styles from './styles'
 
-export default function MainPage() {
+export default function MainPage({ navigation }) {
 
   const [loaded] = useFonts({
     PoppinsMedium: require('../../../assets/fonts/Poppins-Medium.ttf'),
@@ -33,13 +33,15 @@ export default function MainPage() {
           />
           <View style={styles.Desc}> 
             <Text style={styles.Title}>Encontre um designer que combina com você</Text>
-            <Text style={styles.Text}>Explore diversos perfis e encontre um profissional com quem você se identifica</Text>
+            <Text style={styles.Subtitle}>Explore diversos perfis e encontre um profissional com quem você se identifica</Text>
           </View>
         </View>
-        <DefaultButton valor='Comece agora!'></DefaultButton>
-        <View style={styles.Link}>
-            <Text style={styles.Text}>Novo por aqui? </Text>
-            <Text style={styles.Hiperlink}><Link to={{ screen: 'SignUp' }}>Registre-se aqui</Link></Text>
+        <View style={styles.CallToAction}>
+        <DefaultButton valor='Comece agora!' onPress={() => navigation.navigate('SignUp')}/>
+          <View style={styles.Link}>
+            <Text style={styles.Text}>Já possui uma conta? </Text>
+            <Text style={styles.Hiperlink}><Link to={{ screen: 'SignIn' }}>Entre aqui</Link></Text>
+          </View>
         </View>
         <StatusBar style="auto" />
       </View>

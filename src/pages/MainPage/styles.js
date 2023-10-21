@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   FullProject: {
-    gap: 98,
+    gap: 32,
     flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
@@ -15,22 +15,35 @@ const styles = StyleSheet.create({
   },
   MainContainer:{
     width: '100%',
-    gap: 112,
-    paddingInline: '0.5rem',
+    gap: 64,
+    paddingInline: '1rem',
   },
   Container: {
     gap: '16px',
     width: '100%',  },
   Hero: {
-    gap: '12px',
+    gap: '64px',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 8,
+  },
+  HeroImage: {
+    width: 248,
+    height: 302,
+  },
+  Desc: {
+    gap: 16,
+    width: 318,
   },
   Title: {
     fontFamily: 'PoppinsBold',
-    fontSize: '24px',
+    fontSize: '18px',
     color: '#26262B',
+    textAlign: 'center',
+  },
+  Subtitle: {
+    fontFamily: 'MerriweatherLight',
+    color: '#26262B',
+    textAlign: 'center',
   },
   Link: {
     display: 'flex',
@@ -49,9 +62,8 @@ const styles = StyleSheet.create({
     color: '#F86041',
     textDecorationLine: 'underline',
   },
-  Forgot: {
-    flexDirection: 'row',
-    justifyContent: 'end',
+  CallToAction: {
+    gap: 32,
   }
 });
 
